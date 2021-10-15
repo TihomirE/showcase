@@ -30,6 +30,9 @@
     "feature-authentication": {
       "tags": ["scope:auth", "type:feature"]
     },
+    "shared-theme": {
+      "tags": []
+    },
     "shared-ui-components-loading": {
       "tags": ["scope:shared", "type:ui"]
     },
