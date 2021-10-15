@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@showcase/feature/authentication": [
+        "libs/feature/authentication/src/index.ts"
+      ],
+      "@showcase/shared/ui-components/loading": [
+        "libs/shared/ui-components/loading/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,31 @@
+<div class="loginBackground">
+    <section>
+        <div class="loginTitle">{{title}}</div>
+    </section>
+
+    <section>
+        <form [formGroup]="loginFormGroup" (ngSubmit)="doLogin()">
+
+            <div class="centerItems" style="flex-direction: column;">
+                <div style="display: flex; flex-direction: column;">
+                    <p class="loginText">Username</p>
+                    <input name="username" type="username" required autocomplete="username" class="loginInput"
+                        formControlName="username">
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <p class="loginText">Password</p>
+                    <input name="password" type="password" required autocomplete="password" class="loginInput"
+                        formControlName="password">
+                </div>
+            </div>
+
+            <div class="centerItems" *ngIf="!loading">
+                <button type="submit" class="loginButton" id="loginBtn">
+                    <p>Login</p>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <ui-loading-spinner [loading]="loading"></ui-loading-spinner>
+</div>

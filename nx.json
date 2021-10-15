@@ -27,11 +27,17 @@
     ]
   },
   "projects": {
+    "feature-authentication": {
+      "tags": ["scope:auth", "type:feature"]
+    },
+    "shared-ui-components-loading": {
+      "tags": ["scope:shared", "type:ui"]
+    },
     "task-manager": {
-      "tags": []
+      "tags": ["scope:shared", "type:app"]
     },
     "task-manager-e2e": {
-      "tags": [],
+      "tags": ["scope:shared", "type:test"],
       "implicitDependencies": ["task-manager"]
     }
   }

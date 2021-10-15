@@ -3,6 +3,7 @@
 # Showcase
 
 **This is a showcase project of a simple Task management app**
+
 **Quick description** - Users can manage (create, work on, change status, delete etc) assigned tasks
 
 ## Technologies
