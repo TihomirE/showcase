@@ -2,7 +2,24 @@
 
 # Showcase
 
-This project was generated using [Nx](https://nx.dev).
+**This is a showcase project of a simple Task management app**
+**Quick description** - Users can manage (create, work on, change status, delete etc) assigned tasks
+
+## Technologies
+
+**Monorepo**
+
+Nx *(Nrwl)* is used for workspace generation and Nx monorepo pattern is followed (apps (for front and backend) are *"light"* and libs (utility, feature, UI, data access) cary most of the weight)
+
+**Frontend**
+
+Angular is used as a main frontend framework with addition to Ionic as an additional wrapper for mobile support
+
+**Backend**
+
+NestJS is used for handling all backend functionality/tasks
+
+<!-- This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
@@ -91,4 +108,4 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+Visit [Nx Cloud](https://nx.app/) to learn more. -->
