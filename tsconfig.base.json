@@ -18,7 +18,7 @@
       "@showcase/feature/authentication": [
         "libs/feature/authentication/src/index.ts"
       ],
-      "@showcase/shared/theme": ["libs/shared/theme/src/lib"],
+      "@showcase/shared/theme": ["libs/shared/theme/src/lib/main.scss"],
       "@showcase/shared/ui-components/loading": [
         "libs/shared/ui-components/loading/src/index.ts"
       ]
