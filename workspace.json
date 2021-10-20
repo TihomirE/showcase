@@ -23,6 +23,31 @@
         }
       }
     },
+    "shared-localization": {
+      "projectType": "library",
+      "root": "libs/shared/localization",
+      "sourceRoot": "libs/shared/localization/src",
+      "prefix": "showcase",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/localization"],
+          "options": {
+            "jestConfig": "libs/shared/localization/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/localization/src/**/*.ts",
+              "libs/shared/localization/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-theme": {
       "root": "libs/shared/theme",
       "sourceRoot": "libs/shared/theme/src",
