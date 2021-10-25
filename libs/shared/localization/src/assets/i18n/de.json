@@ -1,0 +1,10 @@
+{
+    "TEST": {
+        "string": "Deutsch"
+    },
+    "LOGIN": {
+        "button": "Anmelden",
+        "username": "Benutzername",
+        "password": "Passwort"
+    }
+}

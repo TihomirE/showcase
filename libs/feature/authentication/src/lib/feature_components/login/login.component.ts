@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -18,11 +18,13 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private activatedroute: ActivatedRoute,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   async doLogin() {
     this.loading = true;
+    this.router.navigate(['app']);
   }
 
   ngOnInit() {

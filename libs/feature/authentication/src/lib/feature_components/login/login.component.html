@@ -6,13 +6,13 @@
     <section>
         <form [formGroup]="loginFormGroup" (ngSubmit)="doLogin()">
 
-            <div class="centerItems" style="flex-direction: column;">
-                <div style="display: flex; flex-direction: column;">
+            <div class="centerItems flexColumn">
+                <div class="flexColumn">
                     <p class="loginText" id="username">Username</p>
                     <input name="username" type="username" required autocomplete="username" class="loginInput"
                         formControlName="username">
                 </div>
-                <div style="display: flex; flex-direction: column;">
+                <div class="flexColumn">
                     <p class="loginText" id="password">Password</p>
                     <input name="password" type="password" required autocomplete="password" class="loginInput"
                         formControlName="password">

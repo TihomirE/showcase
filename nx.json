@@ -34,7 +34,7 @@
       "tags": ["scope:shared", "type:core"]
     },
     "shared-theme": {
-      "tags": []
+      "tags": ["scope:shared", "type:theme"]
     },
     "shared-ui-components-loading": {
       "tags": ["scope:shared", "type:ui"]

@@ -1,1 +1,1 @@
-export * from './lib/shared-localization.module';
+export * from './lib';

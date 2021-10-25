@@ -1,5 +1,4 @@
-// @import '../../../../../../shared/theme/src/lib/main';
-
+@import '../../../../../../shared/theme/src/lib/main';
 
 .loginBackground {
     height: 100%;
@@ -73,4 +72,8 @@
         text-align: center;
         color: white;
     }
+}
+
+.flexColumn {
+    @include flexColumn();
 }
