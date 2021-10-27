@@ -2,6 +2,9 @@
     "TEST": {
         "string": "Deutsch"
     },
+    "MAIN": {
+        "menu": "Menu"
+    },
     "LOGIN": {
         "button": "Anmelden",
         "username": "Benutzername",

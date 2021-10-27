@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedLocalizationModule } from '@showcase/shared/localization';
 import { SharedModule } from './shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
     IonicModule.forRoot(), 
     AppRoutingModule, 
     SharedModule,
+    TranslateModule,
     SharedLocalizationModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

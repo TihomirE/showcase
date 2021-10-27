@@ -1,19 +1,20 @@
 <ion-app>
-
   <ion-menu side="end" contentId="main">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
+        <!-- TODO need to fix font-family and use main font -->
+        <ion-title style="font-family: var('$mainFont');">{{ 'MAIN.menu' | translate }}</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-      </ion-list>
+      <ion-menu-toggle *ngFor="let item of menuItems">
+        <ion-item button (click)="setTitle(item.title)" [routerLink]="item.path" routerDirection="root"
+          routerLinkActive="active-item" [routerLinkActiveOptions]="{exact: true}" style="font-family: var(mainFont);">
+          <!-- TODO need to fix font-family and use main font -->
+          <ion-icon [name]="item.icon" slot="start" color="primary"></ion-icon>
+          {{ item.title }}
+        </ion-item>
+      </ion-menu-toggle>
     </ion-content>
   </ion-menu>
 

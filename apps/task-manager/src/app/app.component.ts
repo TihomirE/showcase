@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import * as Localization from '@showcase/shared/localization'
+import * as Localization from '@showcase/shared/localization';
+import { EventBusService, EventData } from './core/helpers/event-bus.service';
+import { MenuItem, MenuService } from './core/services/menu.service';
 
 @Component({
   selector: 'showcase-root',
@@ -9,9 +11,25 @@ import * as Localization from '@showcase/shared/localization'
 })
 export class AppComponent implements OnInit {
 
-  constructor(private translate: TranslateService) {}
+  menuItems = [] as MenuItem[];
+
+  constructor(
+    private translate: TranslateService,
+    private menuService: MenuService,
+    private eventBusService: EventBusService
+  ) { }
+
+  setMenuItems() {
+    this.menuItems = this.menuService.setMenu();
+  }
+
+  setTitle(title: string) {
+    this.eventBusService.emit(new EventData('AppTitle', title));
+  }
 
   ngOnInit(): void {
     Localization.LocalizationService.setInitialAppLanguage(this.translate);
+    this.setMenuItems();
+    // this.setTitle(Localization.LocalizationService.selected === 'en' ? 'Home' : 'Hauptseite');
   }
 }
