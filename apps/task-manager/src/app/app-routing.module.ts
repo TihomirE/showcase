@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './shared/dashboard/dashboard.component';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 
 const routes: Routes = [
@@ -7,7 +8,10 @@ const routes: Routes = [
   { path: 'auth', loadChildren: () => import('@showcase/feature/authentication').then((m) => m.FeatureAuthModule), data: { title: "Task Manager Login" } },
   {
     path: 'app', component: MainLayoutComponent,
-    children: []
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent }
+    ]
   }
 ];
 
