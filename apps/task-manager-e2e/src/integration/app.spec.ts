@@ -3,7 +3,7 @@ import { getTitle } from '../support/app.po';
 describe('task-manager', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
+  it('should display login screen', () => {
     // Custom command example, see `../support/commands.ts` file
     // cy.login('my-email@something.com', 'myPassword');
 
