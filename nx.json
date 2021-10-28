@@ -39,6 +39,9 @@
     "shared-ui-components-loading": {
       "tags": ["scope:shared", "type:ui"]
     },
+    "shared-util-message-bus": {
+      "tags": []
+    },
     "task-manager": {
       "tags": ["scope:shared", "type:app"]
     },

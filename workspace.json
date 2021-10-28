@@ -92,6 +92,28 @@
         }
       }
     },
+    "shared-util-message-bus": {
+      "root": "libs/shared/util/message-bus",
+      "sourceRoot": "libs/shared/util/message-bus/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/util/message-bus/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/util/message-bus"],
+          "options": {
+            "jestConfig": "libs/shared/util/message-bus/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "task-manager": {
       "projectType": "application",
       "root": "apps/task-manager",
