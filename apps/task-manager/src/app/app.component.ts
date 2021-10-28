@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import * as Localization from '@showcase/shared/localization';
-import { EventBusService, EventData } from './core/helpers/event-bus.service';
+import * as MessageBus from '@showcase/shared/util/message-bus';
 import { MenuItem, MenuService } from './core/services/menu.service';
 
 @Component({
@@ -15,8 +15,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private translate: TranslateService,
-    private menuService: MenuService,
-    private eventBusService: EventBusService
+    private menuService: MenuService
   ) { }
 
   setMenuItems() {
@@ -25,7 +24,8 @@ export class AppComponent implements OnInit {
 
   setTitle(title: string) {
     // TODO enum for event types?
-    this.eventBusService.emit(new EventData('AppTitle', title));
+    // this.eventBusService.emit(new EventData('AppTitle', title));
+    MessageBus.MessageBusEmitter.sendMessage('AppTitle', { description: title } as MessageBus.IMessage);
   }
 
   ngOnInit(): void {

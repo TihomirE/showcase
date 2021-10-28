@@ -1,17 +1,16 @@
 import { EventEmitter } from 'events';
-import { _MessageType } from './enums/_MessageType';
+// import { _MessageType } from './enums/_MessageType';
 import { IMessage } from './interfaces/IMessage';
-import { IMessageBus } from './interfaces/IMessageBus';
 
-export class MessageBusEmitter implements IMessageBus {
+export class MessageBusEmitter {
 
-  private emitter: EventEmitter = new EventEmitter();
+  public static emitter: EventEmitter = new EventEmitter();
 
-  sendMessage(messagetype: _MessageType, message: IMessage): void {
-    this.emitter.emit(messagetype.toString(), message);
+  static sendMessage(identifier: string, message: IMessage): void {
+    this.emitter.emit(identifier, message);
   }
 
-  subscribe(messagetype: _MessageType, func: (message: IMessage) => unknown) {
-    this.emitter.on(messagetype.toString(), func);
+  static subscribe(identifier: string, func: (message: IMessage) => unknown) {
+    this.emitter.on(identifier, func);
   }
 }

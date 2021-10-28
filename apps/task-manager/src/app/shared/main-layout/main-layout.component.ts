@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EventBusService } from '../../core/helpers/event-bus.service';
 import * as Localization from '@showcase/shared/localization';
+import * as MessageBus from '@showcase/shared/util/message-bus';
 import { MenuItem, MenuService } from '../../core/services/menu.service';
 
 @Component({
@@ -16,7 +16,6 @@ export class MainLayoutComponent implements OnInit {
   menuItems = [] as MenuItem[];
 
   constructor(
-    private eventBusService: EventBusService,
     private menuService: MenuService
   ) { }
 
@@ -25,9 +24,10 @@ export class MainLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.eventBusService.on('AppTitle', (data: string) => {
-      this.title = data;
-    });
+    // this.eventBusService.on('AppTitle', (data: string) => {
+    //   this.title = data;
+    // });
+    MessageBus.MessageBusEmitter.subscribe('AppTitle', message => this.title = message.description);
     this.setMenuItems();
   }
 
