@@ -1,12 +1,28 @@
 describe('main-layout', () => {
-    beforeEach(() => cy.visit('/app'));
+    context('<768p resolution', () => {
+        beforeEach(() => {
+            cy.visit('/app')
+            cy.viewport('iphone-8')
+        })
 
-    it('should display main layout', () => {
-        // how to check for different values on one element (because of i18n)
-        // const runout = ['English', 'Deutsch']
-        // const regex = new RegExp(`${runout.join('|')}`, 'g')
-        // cy.get('p[id="testString"]').contains(regex);
+        it('should display mobile header', () => {    
+            cy.get('.mobileHeader').should('be.visible');
+            cy.get('.mobileToolbar').should('be.visible');
+        })
+    })
 
-        cy.get('p[id="testString"]').should('contain', 'Deutsch');
-    });
-});
+    context('>768p resolution', () => {
+        beforeEach(() => {
+            cy.visit('/app')
+            cy.viewport(1280, 720)
+        })
+
+        it('should display desktop header', () => {    
+            // cy.get('.mainTitle');
+            cy.get('.fullHeader').should('be.visible');
+            cy.get('.menuItemDesktop').should('be.visible');
+            // cy.get('.outlet');
+        })
+    })
+    
+})
