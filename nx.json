@@ -40,7 +40,7 @@
       "tags": ["scope:shared", "type:ui"]
     },
     "shared-util-message-bus": {
-      "tags": []
+      "tags": ["scope:shared", "type:util"]
     },
     "task-manager": {
       "tags": ["scope:shared", "type:app"]

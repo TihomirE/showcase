@@ -1,1 +1,1 @@
-export * from './lib/shared-util-message-bus';
+export * from './lib';
