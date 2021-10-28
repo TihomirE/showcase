@@ -6,8 +6,6 @@ import * as Localization from '@showcase/shared/localization';
 })
 export class MenuService {
 
-  constructor() { }
-
   setMenu(): MenuItem[] {
     const menuItems: MenuItem[] = new Array<MenuItem>();
 

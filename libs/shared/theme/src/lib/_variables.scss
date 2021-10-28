@@ -1,5 +1,25 @@
 // ** colors
-$mainColor: #288fbf;
+$main-color: #288fbf;
+$pure-white: #ffffff;
+$light-black: #393939;
+$active: #68c1b8;
 
 // ** fonts
 $mainFont: Noto Sans Mono;
+
+// ** font helpers
+$font-sizes: (
+  "small": 10px,
+  "medium": 12px,
+  "middle": 14px,
+  "regular": 16px,
+  "standard": 20px,
+  "large": 30px
+);
+
+$font-weights: (
+  "easy": 200,
+  "normal": 400,
+  "semi-bold": 600,
+  "bold": 800
+);

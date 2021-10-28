@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+    .mobileHeader {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .fullHeader {
+        display: none !important;
+    }
+}

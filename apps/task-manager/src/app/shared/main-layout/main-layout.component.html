@@ -1,14 +1,22 @@
-<!-- <p id="testString">{{ 'TEST.string' | translate }}</p> -->
-
-<ion-header>
-    <ion-toolbar>
+<ion-header class="mobileHeader">
+    <ion-toolbar class="mobileToolbar">
         <ion-buttons slot="end">
-            <ion-menu-button></ion-menu-button>
+            <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{title}}</ion-title>
+        <ion-title>
+            <span class="mainTitle">{{title}}</span>
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content> <!--  class="no-scroll" -->
-    <ion-router-outlet></ion-router-outlet>
+<section class="fullHeader">
+    <ion-button fill="clear" *ngFor="let item of menuItems">
+        <a routerLink={{item.path}} routerDirection="root" routerLinkActive="active-item"
+            [routerLinkActiveOptions]="{exact:true}" class="menuItemDesktop">{{ item.title }}</a>
+    </ion-button>
+</section>
+
+<ion-content>
+    <!--  class="no-scroll" -->
+    <ion-router-outlet style="margin: 8px;"></ion-router-outlet>
 </ion-content>

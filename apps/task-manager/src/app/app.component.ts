@@ -24,12 +24,12 @@ export class AppComponent implements OnInit {
   }
 
   setTitle(title: string) {
+    // TODO enum for event types?
     this.eventBusService.emit(new EventData('AppTitle', title));
   }
 
   ngOnInit(): void {
     Localization.LocalizationService.setInitialAppLanguage(this.translate);
     this.setMenuItems();
-    // this.setTitle(Localization.LocalizationService.selected === 'en' ? 'Home' : 'Hauptseite');
   }
 }

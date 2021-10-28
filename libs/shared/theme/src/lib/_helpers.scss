@@ -4,7 +4,38 @@
   align-items: center;
 }
 
+@mixin flexEnd() {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin flexColumn() {
   display: flex;
   flex-direction: column;
+}
+
+@mixin textBasic() {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin textCustom($fontFamily, $fontSize, $fontWeight, $fontColor) {
+  @include textBasic();
+  font-family: $fontFamily;
+  font-size: getFontSize($fontSize);
+  font-weight: getFontWeight($fontWeight);
+  color: $fontColor;
+}
+
+// Functions
+
+@function getFontWeight($weight-name) {
+  @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+@function getFontSize($size-name) {
+  @return map-get($map: $font-sizes, $key: $size-name);
 }

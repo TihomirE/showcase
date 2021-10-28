@@ -126,6 +126,9 @@
               "apps/task-manager/src/styles.scss",
               {
                 "input": "apps\\task-manager/src/theme/variables.scss"
+              },
+              {
+                "input": "libs\\shared/theme/src/lib/main.scss"
               }
             ],
             "scripts": []
