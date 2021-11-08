@@ -8,12 +8,13 @@
 
             <div class="centerItems flexColumn">
                 <div class="flexColumn">
-                    <p class="loginText" id="username">Username</p>
+                    <p class="loginText" id="username">
+                        <p class="loginText">{{ 'LOGIN.Username' | translate }}</p>
                     <input name="username" type="username" required autocomplete="username" class="loginInput"
                         formControlName="username">
                 </div>
                 <div class="flexColumn">
-                    <p class="loginText" id="password">Password</p>
+                    <p class="loginText" id="password">{{ 'LOGIN.Password' | translate }}</p>
                     <input name="password" type="password" required autocomplete="password" class="loginInput"
                         formControlName="password">
                 </div>
@@ -21,7 +22,7 @@
 
             <div class="centerItems" *ngIf="!loading">
                 <button type="submit" class="loginButton" id="loginBtn">
-                    <p>Login</p>
+                    <p>{{ 'LOGIN.Login_button' | translate }}</p>
                 </button>
             </div>
         </form>

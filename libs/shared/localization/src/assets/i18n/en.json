@@ -6,8 +6,8 @@
         "menu": "Menu"
     },
     "LOGIN": {
-        "button": "Login",
-        "username": "Username",
-        "password": "Password"
+        "Login_button": "Login",
+        "Username": "Username",
+        "Password": "Password"
     }
 }
