@@ -21,4 +21,4 @@ export function TranslateLoaderFactory(http: HttpClient) {
     })
   ]
 })
-export class SharedLocalizationModule {}
+export class SharedLocalizationModule { }

@@ -7,9 +7,7 @@
 
 .loginTitle {
     font-family: Noto Sans Mono;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter();
     padding: 4vh;
     font-size: 4vh;
     color: #ffffff;
@@ -17,9 +15,7 @@
 }
 
 .centerItems {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
 }
 
 .loginText {
