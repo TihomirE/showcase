@@ -3,13 +3,16 @@
         <div class="loginTitle">{{title}}</div>
     </section>
 
+    <div id="logoIcon">
+        <ion-icon name="bar-chart-sharp"></ion-icon>
+    </div>
+
     <section>
         <form [formGroup]="loginFormGroup" (ngSubmit)="doLogin()">
 
             <div class="centerItems flexColumn">
                 <div class="flexColumn">
-                    <p class="loginText" id="username">
-                        <p class="loginText">{{ 'LOGIN.Username' | translate }}</p>
+                    <p class="loginText" id="username">{{ 'LOGIN.Username' | translate }}</p>
                     <input name="username" type="username" required autocomplete="username" class="loginInput"
                         formControlName="username">
                 </div>
