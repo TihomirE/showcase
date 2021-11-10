@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './shared/admin/admin.component';
 import { DashboardComponent } from './shared/dashboard/dashboard.component';
-import { LanguageComponent } from './shared/language/language.component';
+// import { LanguageComponent } from './shared/language/language.component';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import { TasksComponent } from './shared/tasks/tasks.component';
 
@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tasks', component: TasksComponent },
       { path: 'admin', component: AdminComponent },
-      { path: 'language', component: LanguageComponent }
+      { path: 'language', loadChildren: () => import('@showcase/feature/language/select-language').then((m) => m.FeatureLanguageSelectLanguageModule) }
     ]
   }
 ];

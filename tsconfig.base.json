@@ -18,6 +18,9 @@
       "@showcase/feature/authentication": [
         "libs/feature/authentication/src/index.ts"
       ],
+      "@showcase/feature/language/select-language": [
+        "libs/feature/language/select-language/src/index.ts"
+      ],
       "@showcase/shared/localization": [
         "libs/shared/localization/src/index.ts"
       ],

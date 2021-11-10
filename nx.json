@@ -30,6 +30,9 @@
     "feature-authentication": {
       "tags": ["scope:auth", "type:feature"]
     },
+    "feature-language-select-language": {
+      "tags": ["scope:i18n", "type:feature"]
+    },
     "shared-localization": {
       "tags": ["scope:shared", "type:core"]
     },

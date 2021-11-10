@@ -1,5 +1,5 @@
-<!-- <div class="languageRectangle" *ngFor="let lng of languages" (click)="changeLanguage(lng)" [ngClass]="{'activeLanguage': lng.checked}">
-    <span style="margin: 24px; font-size: 24px;">{{lng.text}}</span> -->
+<div class="languageRectangle" *ngFor="let language of languages" (click)="changeLanguage(language)" [ngClass]="{'activeLanguage': language.selected}">
+    <span style="margin: 24px; font-size: 24px;">{{language.language}}</span>
     <!-- <ion-grid>
         <ion-row>
             <ion-col size="2">
@@ -15,4 +15,4 @@
             </ion-col>
         </ion-row>
     </ion-grid> -->
-<!-- </div> -->
+</div>
